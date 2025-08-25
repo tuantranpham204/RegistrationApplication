@@ -2,6 +2,8 @@ const express = require('express');
 const { register, login, verifyToken, forgotPassword, resetPassword } = require('../services/authService');
 const passport = require('passport');
 const router = express.Router();
+require('dotenv').config();
+
 
 router.post('/register', async (req, res) => {
     try {

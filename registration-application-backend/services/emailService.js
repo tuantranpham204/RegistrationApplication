@@ -1,4 +1,5 @@
 const nodemailer = require("nodemailer");
+require('dotenv').config();
 
 // Create a test account or replace with real credentials.
 const transporter = nodemailer.createTransport({
@@ -9,6 +10,8 @@ const transporter = nodemailer.createTransport({
     user: process.env.SMTP_USERNAME,
     pass: process.env.SMTP_PASSWORD,
   },
+  debug:true,
+  logger:true
 });
 
 // Wrap in an async IIFE so we can use await.
@@ -26,6 +29,8 @@ const emailLinkSender = async(subject, link, linkContent,  emailList) => {
     }
   });
 
+  return info
+
 };
 
 const emailPlainTextSender = async(subject,content, emailList) => {
@@ -42,6 +47,7 @@ const emailPlainTextSender = async(subject,content, emailList) => {
     }
   });
 
+  return info
 };
 
 module.exports = {emailLinkSender, emailPlainTextSender}
