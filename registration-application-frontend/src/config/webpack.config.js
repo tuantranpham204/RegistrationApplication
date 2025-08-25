@@ -33,7 +33,7 @@ module.exports = {
   resolve: {
     alias: {
       'jet-views': path.resolve(__dirname, 'src/views'),
-      'jet-models': path.resolve(__dirname, 'src/models'),
+      // 'jet-models': path.resolve(__dirname, 'src/models'),
       // 'webix': path.resolve(__dirname, 'node_modules/webix/webix.min.js'),
       // 'webix-jet': path.resolve(__dirname, 'node_modules/webix-jet/jet.js')
     },
