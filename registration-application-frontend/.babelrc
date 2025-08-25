@@ -1,14 +1,12 @@
 {
   "presets": [
-    [
-      "@babel/preset-env",
-      {
-        "modules": "auto",
-        "targets": {
-          "browsers": ["last 2 versions", "not dead", "> 0.2%"]
-        }
-      }
-    ]
+    ["env", {
+      "targets": {
+        "browsers": ["last 2 versions", "IE >= 11"]
+      },
+      "modules":false,
+      "loose":true
+    }]
   ],
-  "sourceType": "module"
+  "plugins": ["transform-object-rest-spread", "syntax-dynamic-import"]
 }

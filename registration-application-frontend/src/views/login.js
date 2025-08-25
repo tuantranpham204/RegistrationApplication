@@ -1,5 +1,4 @@
-import { JetView } from "webix-jet";
-import { login } from "../apis/authApis";
+import { JetView } from "webix-jet"
 
 export default class Login extends JetView {
   constructor(app, data) {
@@ -26,12 +25,12 @@ export default class Login extends JetView {
               view: "button",
               value: "Login",
               css: "webix_primary",
-              //click: () => this.handleLogin(),
+              click: () => this.handleLogin(),
             },
             {
               view: "button",
               value: "Cancel",
-              //click: () => this.$$("loginForm").clear(),
+              click: () => this.$$("loginForm").clear(),
             },
           ],
         },
@@ -41,13 +40,13 @@ export default class Login extends JetView {
               view: "button",
               value: "Forgot Password",
               type: "link",
-              //click: () => this.app.show("/forgot"),
+              click: () => this.app.show("/forgot"),
             },
             {
               view: "button",
               value: "Register",
               type: "link",
-              //click: () => this.app.show("/register"),
+              click: () => this.app.show("/register"),
             },
           ],
         },
